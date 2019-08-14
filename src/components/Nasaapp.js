@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Nasaslide from "./Nasaslide";
 
 export default function Nasaapp() {
     const [nasaobj, setNasaobj] = useState([]);
   
     useEffect(() => {
       axios
-        .get(`https://api.nasa.gov/EPIC/api/natural/images?api_key=DEMO_KEY`, {
+        .get(`https://api.nasa.gov/EPIC/api/natural/images?api_key=3ZziD2DucHvduPC0uV2H0qfmSZebMO8gdBXYfVVy`, {
           params: {}
         })
         .then(response => {
@@ -20,7 +21,19 @@ export default function Nasaapp() {
     }, []);
     return (
       <div className="container">
-           </div>
+        {nasaobj.map(data => {
+          return (
+            <Nasaslide
+              key={data.identifier}
+              identifier={data.identifier}
+              date={data.date}
+              caption={data.caption}
+              image={data.image}
+            />
+          );
+        })}
+
+      </div>
     );
   }
   
