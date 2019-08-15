@@ -1,6 +1,7 @@
 import React from "react";
 import { Header, Segment, Image, Dimmer, Loader } from 'semantic-ui-react'
 import styled from 'styled-components';
+import Box from '@material-ui/core/Box';
 
 const LoaderExampleInline = () => (
   <div>
@@ -35,7 +36,7 @@ const Nasaslide = props => {
         <Header as='h1' textAlign='center'>{props.title} </Header>
         <BorderedImage src={props.hdurl} alt="Our planet" size='big' centered />
         <Header as='h3' textAlign='center'> Date of picture: {props.date}</Header>
-        <p>{props.explanation}</p>
+        <Box component="p" m={1}>{props.explanation}</Box>
       </ColoredSegment>
     </div>
   );
