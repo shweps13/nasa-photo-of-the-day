@@ -26,6 +26,8 @@ export default function Nasaapp() {
     // let index = 0;
     // let currentObjMain = nasaobj[index];
     // console.log("Here is the element", currentObjMain)
+   
+
       return (
         <div className="container">
               <Nasaslide
@@ -34,6 +36,7 @@ export default function Nasaapp() {
                 date={nasaobj.date}
                 explanation={nasaobj.explanation}
                 hdurl={nasaobj.hdurl}
+                title={nasaobj.title}
               />
 
 
