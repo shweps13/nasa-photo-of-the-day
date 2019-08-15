@@ -3,7 +3,7 @@ import "./App.css";
 import Nasaapp from "./components/Nasaapp"
 import 'semantic-ui-css/semantic.min.css';
 import { Container } from 'semantic-ui-react'
-
+import styled from 'styled-components';
 
 function App() {
   return (
