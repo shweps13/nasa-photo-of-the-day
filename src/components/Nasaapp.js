@@ -8,7 +8,7 @@ export default function Nasaapp() {
 
     useEffect(() => {
       axios
-        .get(`https://api.nasa.gov/EPIC/api/natural/images?api_key=3ZziD2DucHvduPC0uV2H0qfmSZebMO8gdBXYfVVy`, {
+        .get(`https://api.nasa.gov/planetary/apod?api_key=3ZziD2DucHvduPC0uV2H0qfmSZebMO8gdBXYfVVy`, {
           params: {}
         })
         .then(response => {
@@ -26,22 +26,19 @@ export default function Nasaapp() {
     // let currentObjMain = nasaobj[index];
     // console.log("Here is the element", currentObjMain)
     
-    return (
-      <div className="container">
-        {nasaobj.map(data => {
-          return (
-            <Nasaslide
-              key={data.identifier}
-              identifier={data.identifier}
-              date={data.date}
-              caption={data.caption}
-              image={data.image}
-            />
-          );
-        })}
+      return (
+        <div className="container">
+              <Nasaslide
+                key={nasaobj.service_version}
+                identifier={nasaobj.identifier}
+                date={nasaobj.date}
+                explanation={nasaobj.explanation}
+                hdurl={nasaobj.hdurl}
+              />
 
-      </div>
-    );
+
+        </div>
+      );
   }
   
 
