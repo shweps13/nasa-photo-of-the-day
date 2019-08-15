@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Nasaapp from "./components/Nasaapp"
+import 'semantic-ui-css/semantic.min.css';
 
 function App() {
   return (

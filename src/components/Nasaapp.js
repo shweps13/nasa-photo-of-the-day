@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Nasaslide from "./Nasaslide";
 
+
 export default function Nasaapp() {
     const [nasaobj, setNasaobj] = useState([]);
 
@@ -25,7 +26,6 @@ export default function Nasaapp() {
     // let index = 0;
     // let currentObjMain = nasaobj[index];
     // console.log("Here is the element", currentObjMain)
-    
       return (
         <div className="container">
               <Nasaslide
